@@ -1,0 +1,50 @@
+.movieImg{
+    margin-top: 20px;
+    height: 500px;
+    width: 350px;
+}
+.center{
+    align-items: center;
+}
+.container{
+    width: 100%;
+    max-width: 100vh;
+    margin: 5px;
+    padding: 0 5px;
+    overflow-x: hidden;
+    display: flex;
+    
+}
+.movieDescription {
+    margin: 20px;
+}
+.movieDescription p {
+    margin: 5px;
+}
+ 
+@media only screen and (max-width: 600px) {
+    .movieImg{
+        margin-top: 20px;
+        height: 350px;
+        width: 250px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .container{
+        width: 100%;
+        max-width: 100vh;
+        margin: 0 auto;
+        padding: 0 5px;
+        overflow-x: hidden;
+        display: block;
+        align-items: center;
+        justify-content: center;
+         
+    }
+
+}
+
+.recommended{
+    color: black !important;
+}

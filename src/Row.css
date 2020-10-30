@@ -1,0 +1,52 @@
+.row {
+    color: #fff !important;
+    margin-left: 20px;
+}
+.white{
+    color: white;
+}
+.row__poster{
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+.row__posters{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+     
+}
+.dark{
+    color: black;
+}
+ 
+
+.row__posters::-webkit-scrollbar{
+    display: none;
+}
+
+.row__poster:hover {
+    transform: scale(1.08);
+}
+
+.row__posterLarge {
+    max-height: 250px;
+}
+
+.row__posterLarge:hover {
+    transform: scale(1.09);
+}
+
+.spinnerdiv{
+    height: 3vh;
+    width: 100%;
+  }
+
+  .spinner{
+    align-items: center;
+    place-items: center;
+    display: grid;
+  }
