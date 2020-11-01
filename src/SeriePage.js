@@ -32,7 +32,7 @@ function SeriePage(props) {
 
     function openMovie(movieName, firstAir, movieSeason) {
         if(firstAir){
-            window.location.href = "/download/series/" + movieName ;
+            window.location.href = "/files/TV/" + movieName + `%20S0${movieSeason}`;
         }else {
             window.location.href = "/download/movie/" + movieName;
         }
@@ -88,7 +88,7 @@ function SeriePage(props) {
                         {movie.seasons?.map((data) => {
                             return (
                                 <Button type="primary" 
-                                    onClick={() => openMovie(movie?.name, movie?.first_air_date)} 
+                                    onClick={() => openMovie(movie?.name, movie?.first_air_date, data.name.charAt(7))} 
                                     style={{ margin: "5px" }} 
                                     icon={<DownloadOutlined />} size="large">
                                     Download {data.name}
@@ -99,6 +99,7 @@ function SeriePage(props) {
                     <br/>
                     </div>
             </div>
+            <br/>
             <div className="recommended">
                         <Row isLargeRow dark title="Recommended for you" fetchUrl={fetchRecommendation} /> 
                     </div>

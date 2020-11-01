@@ -19,32 +19,36 @@ function DownloadPage(props) {
             const res = await getMovieLink.get("/movie", {
               params: { name: movieName, type: movieType }
             });
-            setResults(res.data);
-            setLoading(false);
+            setResults(res.data.torrents);
+             setLoading(false);
           };
         handleDownload();
     },[movieName, movieType])
 
-     
+    function openLink(link) {
+      window.location.href = "/download" + link
+    }
+
     return(
-        <div style={{ marginTop: "70px", padding: "5px"}}>
+        <div style={{ marginTop: "70px", padding: "5px"}}>   
           {loading ? <div className="spinnerdiv"> 
                             <div className="spinner" >
                                 <Spin indicator={antIcon} /> 
                             </div>
-                        </div> :
+                        </div> : 
           results?.map(result => {
             return( 
             <>
                 <Card style={{ width: "100%", marginBottom: '5px' }}>
-                <p>FILE NAME: {result.fileName} </p>
+                <p>FILE NAME: {result.title} </p>
                 <p>SIZE: {result.size} </p>
-                <p>UPLOADED: {result.uploaded}  </p>
-                <p>YEAR: {result.year} </p>
-                <p>SEEDERS: {result.seeders} </p>
-                <a href={result.link}><Button type="primary" danger icon={<DownloadOutlined />} size={"large"}>
+                <p>UPLOADER: {result.uploader}  </p>
+                <p>LEECH: {result.leech} </p>
+                <p>SEEDERS: {result.seed} </p>
+                <Button onClick={() => openLink(result.href)} type="primary" danger icon={<DownloadOutlined />} size={"large"}>
                   Download this file
-                </Button></a> 
+                </Button>
+
                 </Card>
              </>
             )

@@ -31,9 +31,9 @@ function MoviePage(props) {
 
     function openMovie(movieName, firstAir) {
         if(firstAir){
-            window.location.href = "/downloaad/serie/" + movieName ;
+            window.location.href = "/download/TV/" + movieName ;
         }else {
-            window.location.href = "/download/movie/" + movieName + '%20720p';
+            window.location.href = "/files/movie/" + movieName + '%20720p';
         }
     }
     
@@ -100,6 +100,7 @@ function MoviePage(props) {
                 </div>
                 </div>
             </div>
+            <br/>
             <div className="recommended">
                     <Row isLargeRow dark title="Recommended for you" fetchUrl={fetchRecommendation} /> 
                 </div>

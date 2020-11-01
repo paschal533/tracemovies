@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Banner from './Banner';
 import axios from './axios';
-//import Row from './Row';
+import Row from './Row';
 import requests from './requests';
 import Footer from './Footer';
 import GridCard from './GridCard';
-import { Typography, Row} from 'antd';
+import { Typography } from 'antd';
 import './App.css';
 import './Row.css';
 import './Nav.css';
+import { LoadingOutlined } from '@ant-design/icons';
+import { Spin } from 'antd';
+  
+
+const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />
 
 const { Title } = Typography;
 
@@ -20,14 +25,15 @@ function SearchResult(props) {
     const query =  props.match.params.query; 
     const searchUrl = `/search/movie?query=${query}&api_key=${API_KEY}`;
     const IMAGE_URL = 'https://images.tmdb.org/t/p/original/';
+    const [show, setShow] = useState(false);
     
      
     
     useEffect(() => {
         async function fetchData() {
             const request = await axios.get(searchUrl);
-            console.log(request);
             setMovies(request.data.results);
+            setShow(true);
             return request;
         }
         fetchData();   
@@ -40,23 +46,17 @@ function SearchResult(props) {
             <div style={{width: '85%', margin: '1rem auto'}} >
                 <Title  style={{ color: 'white'}} level={2}>Results for {query} </Title>
                 <hr />
-                <Row gutter={[16, 16]}>
-                    {movies?.length !== 0 ? movies?.map((movie,index) => {
-                        return ( 
-                        <React.Fragment key={index}>
-                            <GridCard 
-                            movie={movie}
-                            image={movie.poster_path && `${IMAGE_URL}${movie.poster_path}`}
-                            />
-                        </React.Fragment>
-                        )
-                    }) : <h3 style={{ color: 'white', marginTop: '20px', height: '15vh' }}>Sorry we couldn't find 
+                    {show ? movies?.length !== 0 ?  <Row dark isLargeRow  fetchUrl={searchUrl} /> 
+                    : <h3 style={{ color: 'white', marginTop: '20px', height: '15vh' }}>Sorry we couldn't find 
                     the movie {query} .
-                     </h3>}
-                </Row>    
+                     </h3>: <div className="spinnerdiv"> 
+                            <div className="spinner" >
+                                <Spin indicator={antIcon} /> 
+                            </div>
+                        </div>}  
             </div>
             <div className="recommended">
-                <Row dark isLargeRow title="Recommended for you" fetchUrl={requests.fetchActionMovies} /> 
+                <Row isLargeRow title="Recommended for you" fetchUrl={requests.fetchActionMovies} /> 
             </div>
             <Footer />
         </div>
