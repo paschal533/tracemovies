@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/tracemovies/static/css/main.aaf0641a.chunk.css",
+    "main.js": "/tracemovies/static/js/main.a612354c.chunk.js",
+    "main.js.map": "/tracemovies/static/js/main.a612354c.chunk.js.map",
+    "runtime-main.js": "/tracemovies/static/js/runtime-main.fb8d5a57.js",
+    "runtime-main.js.map": "/tracemovies/static/js/runtime-main.fb8d5a57.js.map",
+    "static/css/2.44309f2b.chunk.css": "/tracemovies/static/css/2.44309f2b.chunk.css",
+    "static/js/2.ec3ffea2.chunk.js": "/tracemovies/static/js/2.ec3ffea2.chunk.js",
+    "static/js/2.ec3ffea2.chunk.js.map": "/tracemovies/static/js/2.ec3ffea2.chunk.js.map",
+    "index.html": "/tracemovies/index.html",
+    "precache-manifest.1bb6a3e23acc8eca46e480587e39975c.js": "/tracemovies/precache-manifest.1bb6a3e23acc8eca46e480587e39975c.js",
+    "service-worker.js": "/tracemovies/service-worker.js",
+    "static/css/2.44309f2b.chunk.css.map": "/tracemovies/static/css/2.44309f2b.chunk.css.map",
+    "static/css/main.aaf0641a.chunk.css.map": "/tracemovies/static/css/main.aaf0641a.chunk.css.map",
+    "static/js/2.ec3ffea2.chunk.js.LICENSE.txt": "/tracemovies/static/js/2.ec3ffea2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb8d5a57.js",
+    "static/css/2.44309f2b.chunk.css",
+    "static/js/2.ec3ffea2.chunk.js",
+    "static/css/main.aaf0641a.chunk.css",
+    "static/js/main.a612354c.chunk.js"
+  ]
+}
