@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a423a6233bb0a1d3d9de4856e690b3cf",
+    "revision": "2dbe07e85b9e12305e9426b8fc0f44b3",
     "url": "/tracemovies/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tracemovies/static/css/2.44309f2b.chunk.css"
   },
   {
-    "revision": "28b002992c30a7c4c50a",
+    "revision": "1145dac3ad0d6266b267",
     "url": "/tracemovies/static/css/main.ff1859ff.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tracemovies/static/js/2.844183a9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "28b002992c30a7c4c50a",
-    "url": "/tracemovies/static/js/main.897bbfce.chunk.js"
+    "revision": "1145dac3ad0d6266b267",
+    "url": "/tracemovies/static/js/main.c6343556.chunk.js"
   },
   {
     "revision": "88a8b1e2b807004a5ff3",
